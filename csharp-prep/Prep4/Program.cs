@@ -5,19 +5,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        //Compute the sum,
-/*Compute the sum, or total, of the numbers in the list.
-
-Compute the average of the numbers in the list.
-
-Find the maximum, or largest, number in the list.
-
-Have the user
-Have the user enter both positive and negative numbers, 
-then find the smallest positive number (the positive number that is closest to zero).
-
-Sort the numbers in the list and display the new, sorted list. 
-Hint: There are C# libraries that can help you here, try searching the internet for them.*/
         float inputNumber = 1;
         List<float> inputs = new List<float>() {};
          Console.WriteLine("Enter a list of numbers, type 0 when finished.");
