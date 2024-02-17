@@ -10,23 +10,25 @@ public class Word{
         _word = word;
         _isHidden = hidden;
     }
-    public string getWord(){
+    public string GetWord(){
         return _word;
     }
-    public bool getStatus(){
+    public bool GetStatus(){
         return _isHidden;
     }
-    public void changeStatus(){
-        if (_isHidden == true){
+    public void ChangeStatus(){
+        if(_isHidden == true){
             _isHidden = false;
         } else{
             _isHidden = true;
         }
     }
-    public void replaceWord(){
-        for (int i = 0; i < _word.Length; i++){
+    public void ReplaceWord(){
+        for(int i = 0; i < _word.Length; i++){
             _word = _word.Remove(i, Math.Min(1, _word.Length - i)).Insert(i, "_");
         }
+        
+        ChangeStatus(); 
     }
     
 }
