@@ -16,10 +16,18 @@ public class Referance{
         _endVerse = endVerse;
     }
     public string getReferance(){
-        if (_endVerse == null){
-            return $"{_book} {_chapter} {_startVerse}"
+        if (_endVerse == 0){
+            return $"{_book} {_chapter} {_startVerse}";
         }else{
-            return $"{_book} {_chapter} {_startVerse}-{_endVerse}"
+            return $"{_book} {_chapter} {_startVerse}-{_endVerse}";
         }
     }
+    public void printReferance(){
+        if (_endVerse == 0){
+            Console.WriteLine($"{_book} {_chapter} {_startVerse}");
+        }else{
+            Console.WriteLine($"{_book} {_chapter} {_startVerse}-{_endVerse}");
+        }
+    }
+
 }

@@ -4,6 +4,7 @@ public class Word{
 
     public Word(string word){
         _word = word;
+        _isHidden = false;
     }
     public Word(string word, bool hidden){
         _word = word;
@@ -12,7 +13,7 @@ public class Word{
     public string getWord(){
         return _word;
     }
-    public string getStatus(){
+    public bool getStatus(){
         return _isHidden;
     }
     public void changeStatus(){
@@ -22,4 +23,10 @@ public class Word{
             _isHidden = true;
         }
     }
+    public void replaceWord(){
+        for (int i = 0; i < _word.Length; i++){
+            _word = _word.Remove(i, Math.Min(1, _word.Length - i)).Insert(i, "_");
+        }
+    }
+    
 }
