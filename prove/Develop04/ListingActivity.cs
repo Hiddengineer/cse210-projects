@@ -9,14 +9,16 @@ public class ListingActivity: Activity{
         _responses = new List<string>();
     }
     public void DisplayPrompt(){
-         Random rnd = new Random();
+        Random rnd = new Random();
         bool promptNotShown = true;
+        
         if(_allPromptsUsed){
             for(int i = 0; i < _prompts.Count(); i++){
                 _prompts[i].ChangeStatus();
             }
             _allPromptsUsed = false;
         }
+        
         while(promptNotShown){
             int randPrompt  = rnd.Next(0, _prompts.Count());
             if(_prompts[randPrompt].GetStatus()){
@@ -25,6 +27,7 @@ public class ListingActivity: Activity{
                 promptNotShown = false;
             }
         }
+        
         for(int i = 0; i < _prompts.Count(); i++){
             if(_prompts[i].GetStatus()){
                 i = _prompts.Count;
@@ -45,13 +48,13 @@ public class ListingActivity: Activity{
         while (DateTime.Now < endTime)
         {
             string newItem = Console.ReadLine();
-            if (string.IsNullOrWhiteSpace(newItem))
-                break;
-
-            _responses.Add(newItem);
             
-        }
+            if (string.IsNullOrWhiteSpace(newItem)){
+                break;
+            }
 
+            _responses.Add(newItem); 
+        }
     }
     public int CountResponses(){
         _numResponses = _responses.Count();

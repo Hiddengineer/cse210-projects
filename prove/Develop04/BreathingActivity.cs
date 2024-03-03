@@ -1,10 +1,11 @@
 public class BreathingActivity: Activity{
-    protected string _breathIn;
-    protected string _breathOut;
+    private string _breathIn;
+    private string _breathOut;
 
     public BreathingActivity(string name, string description): base(name, description){}
     public void DisplayBreathingRhythm(){
         int timeLeft = _time;
+        
         while(timeLeft != 0){
             if(timeLeft >= 8){
                 Console.Write("Breath in   ");

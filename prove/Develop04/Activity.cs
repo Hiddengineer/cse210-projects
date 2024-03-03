@@ -44,9 +44,11 @@ public class Activity{
                 case 2: Console.Write("-"); break;
                 case 3: Console.Write("\\"); break;
             }
-        Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
-        Thread.Sleep(250);
+        
+            Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
+            Thread.Sleep(250);
         }
+        
         Console.Write(" ");
         Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
     }

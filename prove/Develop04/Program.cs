@@ -6,6 +6,7 @@ class Program
     {
         Random rnd = new Random();
         int randActivity  = rnd.Next(0, 3);
+        
         switch (randActivity){
             case 0: 
                 BreathingActivity breathing = new BreathingActivity("Breathing",
