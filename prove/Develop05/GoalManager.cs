@@ -1,9 +1,10 @@
 class GoalManager{
-private List<Goal> _currentGoals;
-private List<Goal> _completedGoals;
+private List<Goal> _currentGoals = new List<Goal>();
+private List<Goal> _completedGoals = new List<Goal>();
 private int _score;
 
 public  GoalManager(){
+    _score = 0;
 
 }
 public void DisplayCurrentScore(){
@@ -140,6 +141,9 @@ public void LoadGoals(){
     }
 
     load.Close();
+    TextWriter empty = new StreamWriter("Goal.txt", false);
+    empty.Write(string.Empty);
+    empty.Close();
     }
 
 }

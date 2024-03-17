@@ -1,0 +1,3 @@
+0
+CurrentGoals: 0
+CompletedGoals: 0
