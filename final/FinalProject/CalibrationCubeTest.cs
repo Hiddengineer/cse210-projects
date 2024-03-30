@@ -16,14 +16,14 @@ public CalibrationCubeTest(int date, Filament filamentUsed, int modelXDimension,
 public override void RecordPrint(){
 
 }
-public override void SerializePrint(){
-
+public override string SerializePrint(){
+    return "";
 }
-public override void RecomendSettings(){
-
+public override string RecomendSettings(){
+    return "";
 }
-public override void RecomendPrinterModifications(){
-
+public override string RecomendPrinterModifications(){
+    return "";
 }
 
 }

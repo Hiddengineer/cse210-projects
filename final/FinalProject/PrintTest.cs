@@ -13,16 +13,16 @@ public virtual void RecordPrint(){
 
 }
 public virtual string SerializePrint(){
-
+    return "";
 }
 public virtual string RecomendSettings(){
-
+    return "";
 }
 public virtual string RecomendPrinterModifications(){
-
+    return "";
 }
 public string GetDiscription(){
-
+    return "";
 }
 
 }

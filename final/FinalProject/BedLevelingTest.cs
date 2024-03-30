@@ -15,13 +15,13 @@ public override void RecordPrint(){
 
 }
 public override string SerializePrint(){
-
+    return "";
 }
 public override string RecomendSettings(){
-
+    return "";
 }
 public override string RecomendPrinterModifications(){
-
+    return "";
 }
 
 }

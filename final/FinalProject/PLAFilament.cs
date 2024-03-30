@@ -1,5 +1,8 @@
 class PLAFilament: Filament{
-    public PLAFilament(): base(){}
+    public PLAFilament(): base(){
+        _recomendedSettings = new Settings(90, 200, 55, 100, 90);
+        _currentSettings = _recomendedSettings;
+    }
     public PLAFilament(Settings currentSettings): base(currentSettings){
         _recomendedSettings = new Settings(90, 200, 55, 100, 90);
     }
@@ -21,7 +24,7 @@ class PLAFilament: Filament{
         }
     }
     public override string SerializeFilament(){
-        return $"1: {_recomendedSettings.SerializeSettings()}: {_currentSettings.SerializeSettings}";
+        return $"1: {_currentSettings.SerializeSettings()}";
     }
     public override void DisplayFilament(){
         Console.WriteLine("PLA:");

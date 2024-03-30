@@ -1,5 +1,8 @@
 class TPUFilament: Filament{
-    public TPUFilament(): base(){}
+    public TPUFilament(): base(){
+        _recomendedSettings = new Settings(17, 230, 50, 100, 90);
+        _currentSettings = _recomendedSettings;
+    }
     public TPUFilament(Settings currentSettings): base(currentSettings){
         _recomendedSettings = new Settings(17, 230, 50, 100, 90);
     }
@@ -21,7 +24,7 @@ class TPUFilament: Filament{
         }
     }
     public override string SerializeFilament(){
-        return $"3: {_recomendedSettings.SerializeSettings()}: {_currentSettings.SerializeSettings}";
+        return $"3: {_currentSettings.SerializeSettings()}";
     }
     public override void DisplayFilament(){
         Console.WriteLine("TPU:");

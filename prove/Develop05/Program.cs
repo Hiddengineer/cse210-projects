@@ -118,7 +118,7 @@ class Program
                     Console.WriteLine("which number goal do you want to record?");
                     Console.WriteLine("if you dont know first display current goals.");
 
-                    manager.ChooseGoal(Int32.Parse(Console.ReadLine())).RecordGoal();
+                    manager.AddScore(manager.ChooseGoal(Int32.Parse(Console.ReadLine())).RecordGoal());
                 break;
 
                 case "3":

@@ -2,13 +2,16 @@ class Filament{
     protected Settings _recomendedSettings;
     protected Settings _currentSettings;
 
-    public Filament(){}
+    public Filament(){
+        _recomendedSettings = new Settings(90, 200, 55, 100, 90);
+        _currentSettings = _recomendedSettings;
+    }
     public Filament(Settings currentSettings){
         _currentSettings = currentSettings;
     }
     public virtual void CheckSettingsFesability(){}
     public virtual string SerializeFilament(){
-        return $"0: {_recomendedSettings.SerializeSettings()}: {_currentSettings.SerializeSettings}";
+        return $"0: {_currentSettings.SerializeSettings()}";
     }
     public void UpdateSettings(int speed, int nozelTemp, int bedTemp, int extrusion, int fanSpeed){
         _currentSettings.UpdateSettings(speed, nozelTemp, bedTemp, extrusion, fanSpeed);

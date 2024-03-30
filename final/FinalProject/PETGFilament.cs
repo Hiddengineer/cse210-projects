@@ -1,6 +1,7 @@
 class PETGFilament: Filament{
     public PETGFilament(): base(){
-
+        _recomendedSettings = new Settings(90, 230, 60, 100, 50);
+        _currentSettings = _recomendedSettings;
     }
     public PETGFilament(Settings currentSettings): base(currentSettings){
         _recomendedSettings = new Settings(90, 230, 60, 100, 50);
@@ -23,7 +24,7 @@ class PETGFilament: Filament{
         }
     }
     public override string SerializeFilament(){
-        return $"2: {_recomendedSettings.SerializeSettings()}: {_currentSettings.SerializeSettings}";
+        return $"2: {_currentSettings.SerializeSettings()}";
     }
     public override void DisplayFilament(){
         Console.WriteLine("PETG:");
