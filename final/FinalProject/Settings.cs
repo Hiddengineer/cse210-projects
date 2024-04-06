@@ -12,6 +12,7 @@ class Settings{
         _extrusion = extrusion;
         _fanSpeed = fanSpeed;
     }
+    
     public void UpdateSettings(int speed, int nozelTemp, int bedTemp, int extrusion, int fanSpeed){
         _speed = speed;
         _nozelTemp = nozelTemp;

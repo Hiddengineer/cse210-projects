@@ -9,12 +9,15 @@ class Filament{
     public Filament(Settings currentSettings){
         _currentSettings = currentSettings;
     }
+
     public virtual void CheckSettingsFesability(){}
+    public virtual void DisplayFilament(){}
     public virtual string SerializeFilament(){
         return $"0: {_currentSettings.SerializeSettings()}";
     }
-    public void UpdateSettings(int speed, int nozelTemp, int bedTemp, int extrusion, int fanSpeed){
-        _currentSettings.UpdateSettings(speed, nozelTemp, bedTemp, extrusion, fanSpeed);
+
+    public void UpdateSettings(Settings settings){
+        _currentSettings = settings;
     }
     public void UpdateSpeed(int speed){
         _currentSettings.UpdateSpeed(speed);
@@ -31,5 +34,23 @@ class Filament{
     public void UpdateFanSpeed(int fanSpeed){
         _currentSettings.UpdateFanSpeed(fanSpeed);
     }
-    public virtual void DisplayFilament(){}
+
+    public int GetSpeed(){
+        return _currentSettings.GetSpeed();
+    }
+    public int GetNozelTemp(){
+        return _currentSettings.GetNozelTemp();
+    }
+    public int GetBedTemp(){
+        return _currentSettings.GetBedTemp();
+    }
+    public int GetExtrusion(){
+        return _currentSettings.GetExtrushion();
+    }
+    public int GetFanSpeed(){
+        return _currentSettings.GetFanSpeed();
+    }
+    public Settings GetSettings(){
+        return _currentSettings;
+    }
 }
